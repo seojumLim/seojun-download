@@ -53,7 +53,7 @@ function loadFile(input) {
     var name = document.getElementById('fileName');
     name.textContent = file.name;
 
-    newImage = document.createElement("img");
+    var newImage = document.createElement("img");
     newImage.setAttribute("class", 'img');
 
     newImage.src = URL.createObjectURL(file);   
@@ -79,10 +79,7 @@ function loadFile(input) {
   // Notice there is no 'import' statement. 'mobilenet' and 'tf' is
   // available on the index-page because of the script tag above.
 
-  if newimage != null
-    {
-        var img = newimage
-    }
+  var img = newimage
 
   // Load the model.
   mobilenet.load().then(model => {
